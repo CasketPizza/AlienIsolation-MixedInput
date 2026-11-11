@@ -2,10 +2,29 @@
 
 ## Ultimate ASI Loader
 
-Nexus release archives may include an unmodified `xinput1_3.dll` from
-[Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader) by
-ThirteenAG. Ultimate ASI Loader is a separate project and is not incorporated
-into the Mixed Input source code.
+Nexus release archives include the x86 build of
+[Ultimate ASI Loader v9.0.0](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/tag/v9.0.0)
+by ThirteenAG. Ultimate ASI Loader is a separate project and is not
+incorporated into the Mixed Input source code.
+
+Exact official asset:
+
+<https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/v9.0.0/Ultimate-ASI-Loader.zip>
+
+Verification:
+
+```text
+Official ZIP SHA-256:
+915ef34e75177c434b7b41d9eae195af4d9f1ea1fab5d119d2104f5bd3263d05
+
+Bundled loader SHA-256:
+f8a9852c0a26e356b095661f6b85079f6f95098558f5c3453d9a96fc8cceb28e
+```
+
+The official x86 archive contains `dinput8.dll`. The Nexus package contains the
+exact same binary bytes under the filename `xinput1_3.dll`, which is the proxy
+name used for this Alien: Isolation installation. Only the filename differs;
+the binary has not been modified.
 
 MIT License
 
