@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Build controller-prompt variant
         shell: cmd
         run: build-controller.cmd
@@ -16,12 +16,12 @@ jobs:
         shell: cmd
         run: build-kbm.cmd
       - name: Upload controller-prompt build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: controller-prompts
           path: build/controller-prompts/AlienIsolation.MixedInput.asi
       - name: Upload keyboard-mouse-prompt build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: keyboard-mouse-prompts
           path: build/kbm-prompts/AlienIsolation.MixedInput.asi
