@@ -1,0 +1,33 @@
+# Build output
+/build/
+/cmake-build/
+/out/
+*.asi
+*.dll
+*.exe
+*.obj
+*.lib
+*.exp
+*.pdb
+
+# Local release archives and development evidence
+/releases/
+/analysis/
+/references/
+/legacy/
+
+# Historical local-only files
+/AlienIsolation.MixedInput.ini
+/build.cmd
+/src/MixedInput.cpp
+/tools/validate.py
+/tools/investigate.py
+
+# Python and editor files
+__pycache__/
+*.py[cod]
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,27 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build controller-prompt variant
+        shell: cmd
+        run: build-controller.cmd
+      - name: Build keyboard/mouse-prompt variant
+        shell: cmd
+        run: build-kbm.cmd
+      - name: Upload controller-prompt build
+        uses: actions/upload-artifact@v4
+        with:
+          name: controller-prompts
+          path: build/controller-prompts/AlienIsolation.MixedInput.asi
+      - name: Upload keyboard-mouse-prompt build
+        uses: actions/upload-artifact@v4
+        with:
+          name: keyboard-mouse-prompts
+          path: build/kbm-prompts/AlienIsolation.MixedInput.asi
